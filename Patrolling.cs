@@ -17,6 +17,7 @@ public class Patrolling : MonoBehaviour
         if (_indexPoint > _path.Count - 1)
             _indexPoint = 0;
 
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(_path[_indexPoint].position.x, transform.position.y), _speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position,
+            new Vector2(_path[_indexPoint].position.x, transform.position.y), _speed * Time.deltaTime);
     }
 }
